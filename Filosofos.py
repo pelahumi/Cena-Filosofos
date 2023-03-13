@@ -7,4 +7,6 @@ class Filosofos(threading.Thread):
         self.tenedorIzq = tenedorIzq
         self.tenedorDcho = tenedorDcho
 
-    
+    def pensar(self):
+        print(self.nombre "está pensando.")
+

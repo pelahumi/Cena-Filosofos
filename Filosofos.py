@@ -1,6 +1,6 @@
 import threading
 import time
-
+import random
 
 class Filosofos(threading.Thread):
     def __init__(self, nombre, tenedorIzq, tenedorDcho):
@@ -18,7 +18,10 @@ class Filosofos(threading.Thread):
         self.tenedorIzq.acquire()
         print(self.nombre, "cogió el tenedor izquierdo")
         print(self.nombre, "tiene dos tenedores y puede comer.")
-        time.sleep()
+        time.sleep(random.uniform(0,3))
+        print(self.nombre, "acabó de comer")
+        self.tenedorDcho.release()
+        self.tenedorIzq.release()
     
     def dormir(self):
         print(self.nombre, "está durmiendo.")

@@ -8,5 +8,11 @@ class Filosofos(threading.Thread):
         self.tenedorDcho = tenedorDcho
 
     def pensar(self):
-        print(self.nombre "está pensando.")
+        print(self.nombre, "está pensando.")
+
+    def comer(self):
+        print(self.nombre, "está comiendo.")
+    
+    
+    
 

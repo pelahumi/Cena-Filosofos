@@ -12,21 +12,21 @@ class Filosofos(threading.Thread):
 
     def pensar(self):
         print(self.nombre, "está pensando.")
-        time.sleep(random.uniform(0,3))
+        time.sleep(random.uniform(1,4))
 
     def comer(self):
         self.tenedorDcho.acquire()
-        print(self.nombre, "cogió el tenedor derecho")
+        print(self.nombre, "cogió el tenedor derecho.")
         self.tenedorIzq.acquire()
-        print(self.nombre, "cogió el tenedor izquierdo")
+        print(self.nombre, "cogió el tenedor izquierdo.")
         self.comidas += 1
         print(self.nombre, "tiene dos tenedores y puede comer.")
-        time.sleep(random.uniform(0,3))
-        print(self.nombre, "acabó de comer y lleva {} comidas".format(self.comidas))
+        time.sleep(random.uniform(1,4))
+        print(self.nombre, "acabó de comer.")
         self.tenedorDcho.release()
         self.tenedorIzq.release()
         
-    def iniciar(self):
+    def run(self):
         while (self.comidas < 3):
             self.pensar()
             self.comer()

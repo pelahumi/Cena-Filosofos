@@ -13,6 +13,8 @@ class Filosofos(threading.Thread):
     def comer(self):
         print(self.nombre, "está comiendo.")
     
-    
+    def dormir(self):
+        print(self.nombre, "está durmiendo.")
+        
     
 

@@ -8,6 +8,7 @@ class Filosofos(threading.Thread):
         self.nombre = nombre
         self.tenedorIzq = tenedorIzq
         self.tenedorDcho = tenedorDcho
+        self.comidas = 0
 
     def pensar(self):
         print(self.nombre, "está pensando.")
@@ -18,15 +19,19 @@ class Filosofos(threading.Thread):
         print(self.nombre, "cogió el tenedor derecho")
         self.tenedorIzq.acquire()
         print(self.nombre, "cogió el tenedor izquierdo")
+        self.comidas += 1
         print(self.nombre, "tiene dos tenedores y puede comer.")
         time.sleep(random.uniform(0,3))
-        print(self.nombre, "acabó de comer")
+        print(self.nombre, "acabó de comer y lleva {} comidas".format(self.comidas))
         self.tenedorDcho.release()
         self.tenedorIzq.release()
-
+        
     def iniciar(self):
-        self.pensar()
-        self.comer()
+        while (self.comidas < 3):
+            self.pensar()
+            self.comer()
+        else:
+            print(self.nombre, "comio ya 3 veces.")
 
 
     

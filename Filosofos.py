@@ -11,6 +11,7 @@ class Filosofos(threading.Thread):
 
     def pensar(self):
         print(self.nombre, "está pensando.")
+        time.sleep(random.uniform(0,3))
 
     def comer(self):
         self.tenedorDcho.acquire()
@@ -22,11 +23,10 @@ class Filosofos(threading.Thread):
         print(self.nombre, "acabó de comer")
         self.tenedorDcho.release()
         self.tenedorIzq.release()
-    
-    def dormir(self):
-        print(self.nombre, "está durmiendo.")
 
     def iniciar(self):
+        self.pensar()
+        self.comer()
 
 
     

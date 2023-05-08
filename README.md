@@ -60,6 +60,7 @@ Los métodos de esta clase serán: ```pensar()``` (para que mientras esperan, lo
         self.tenedorDcho.release()
         self.tenedorIzq.release()
         self.semaforo.release()
+```
 
 Además, está el método ´´´run()´´´ para iniciar fácilmente el programa.
 

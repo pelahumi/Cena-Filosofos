@@ -8,13 +8,13 @@ Pincha [aquí](https://github.com/pelahumi/Cena-Filosofos) para acceder a mi rep
   
 ---
 
-## Resumen
+## Resumen<a name="1"></a>
 
 La idea de este trabajo era dar una solución al problema de los filósofos y hacer una ventana gráfica desde la que se pueda ejecutar el código.
 
 ---
 
-## Código y explicación
+## Código y explicación<a name="2"></a>
 
 Importamos las librerías que vamos a utilizar:
 
@@ -101,7 +101,7 @@ def lanzador():
 
 ---
 
-## Ouput
+## Ouput<a name="3"></a>
 El ouput del código es el siguiente:
 
 <img width="445" alt="Captura de pantalla 2023-05-08 a las 16 36 41" src="https://user-images.githubusercontent.com/91721764/236852927-e39a8606-1cdd-4b79-b6f0-3027ebe2e7ee.png">

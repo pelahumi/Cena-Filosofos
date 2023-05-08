@@ -62,7 +62,7 @@ Los métodos de esta clase serán: ```pensar()``` (para que mientras esperan, lo
         self.semaforo.release()
 ```
 
-Además, está el método ´´´run()´´´ para iniciar fácilmente el programa.
+Además, está el método ```run()``` para iniciar fácilmente el programa.
 
 ```
     def run(self):
@@ -72,7 +72,7 @@ Además, está el método ´´´run()´´´ para iniciar fácilmente el programa
 
         else:
             print(self.nombre, "comio ya 3 veces.")
-
+```
 
 En el archivo lazador.py tenemos una función ```lanzador()``` en la que creamos los tenedores, y los filósofos, definiendo todos los campos. Por último iniciamos los hilos con la función ```.start()```.
 
